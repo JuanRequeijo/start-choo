@@ -1,0 +1,109 @@
+body, html, .kanban-container {
+  height: 100%;
+  min-height: 100%;
+  margin:0;
+  background-color: #fafafa;
+  white-space: nowrap;
+}
+
+.kanban-container .content {
+  padding: 80px 16px 16px 16px;
+  box-sizing: border-box;
+  height: 100%;
+  z-index: 1;
+}
+
+.kanban-container .content .card {
+  margin: 5px 0px;
+}
+
+.board {
+  width: 300px;
+  display: inline-block;
+  margin: 0 6px;
+  vertical-align:top;
+  height: @screen-xs;
+}
+
+.board .card {
+  height: 100%;
+  margin: 0;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.board-item-title {
+  font-size: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.board-item-description {
+  font-size: 14px;
+}
+
+.board-item-reveal {
+  overflow-y: hidden !important;
+  padding: 4px 14px !important;
+}
+
+.board-item-reveal .actions {
+  margin-top: 30px;
+}
+
+.board-item-reveal .actions span {
+  width: 30%;
+  display: inline-block;
+}
+
+.board-item-reveal .actions span:hover {
+  cursor: pointer;
+}
+
+.board-item-reveal .card-title {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  padding-right: 6px;
+}
+
+.board-item-reveal .card-title i {
+  font-size: 20px;
+  line-height: 0px;
+}
+
+.activator {
+  cursor: pointer;
+}
+
+.custom-nav {
+  position: absolute;
+  z-index: 2;
+}
+
+html.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown), body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+  height: 100% !important;
+}
+
+.swal2-popup .swal2-content {
+  white-space: initial;
+}
+
+@media (max-width: 768px) {
+  .board {
+    width: 100%;
+    height: initial;
+    margin: auto;
+  }
+
+  .kanban-container {
+    white-space: initial;
+    resize: vertical;
+    overflow: auto;
+  }
+}
+
